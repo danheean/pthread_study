@@ -10,12 +10,14 @@ RTFLAGS=-lrt
 #CFLAGS=-D_POSIX_C_SOURCE=199506 -D_REENTRANT -Xa -lpthread -g $(DEBUGFLAGS)
 #RTFLAGS=-lposix4
 
-SOURCES=alarm.c	alarm_fork.c alarm_thread.c #alarm_cond.c		alarm_mutex.c	\
+SOURCES=alarm.c	alarm_fork.c alarm_thread.c \
+	lifecycle.c \
+	#alarm_cond.c		alarm_mutex.c	\
 	alarm_thread.c	atfork.c	backoff.c	\
 	barrier_main.c	cancel.c	cancel_async.c	cancel_cleanup\
 	cancel_disable.c cancel_subcontract.c	cond.c	cond_attr.c	\
 	crew.c cond_dynamic.c	cond_static.c	flock.c	getlogin.c hello.c \
-	inertia.c	lifecycle.c	mutex_attr.c	\
+	inertia.c		mutex_attr.c	\
 	mutex_dynamic.c	mutex_static.c	once.c	pipe.c	putchar.c	\
 	rwlock_main.c	rwlock_try_main.c		\
 	sched_attr.c	sched_thread.c	semaphore_signal.c	\
